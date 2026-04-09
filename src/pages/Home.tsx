@@ -69,7 +69,7 @@ export default function Home() {
               style={{
                 width: '160px',
                 height: '160px',
-                filter: 'brightness(1.2) drop-shadow(0 4px 16px rgba(0,0,0,0.18))',
+                filter: 'brightness(1.2) drop-shadow(0 2px 8px rgba(0,0,0,0.10))',
                 position: 'relative',
                 zIndex: 1,
               }}
@@ -119,11 +119,11 @@ export default function Home() {
           alignItems: 'center',
         }}>
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://lumeaapp.com&bgcolor=ffffff"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://lumeaapp.com&bgcolor=ffffff"
             alt="QR Code"
             style={{
-              width: '160px',
-              height: '160px',
+              width: '200px',
+              height: '200px',
               marginBottom: '16px',
               borderRadius: '12px',
             }}
@@ -236,7 +236,7 @@ export default function Home() {
           style={{
             width: 'clamp(96px, 20vw, 128px)',
             height: 'clamp(96px, 20vw, 128px)',
-            filter: 'brightness(1.2) drop-shadow(0 4px 16px rgba(0,0,0,0.18))',
+            filter: 'brightness(1.2) drop-shadow(0 2px 8px rgba(0,0,0,0.10))',
             marginBottom: '20px',
             position: 'relative',
             zIndex: 1,
@@ -297,16 +297,22 @@ export default function Home() {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '12px',
         alignItems: 'center',
+        gap: '12px',
+        width: '100%',
+        maxWidth: '260px',
+        margin: 'auto',
       }}>
         <a
           href='https://apps.apple.com/app/lumea/id6743393506'
           target="_blank"
           rel="noopener noreferrer"
           style={{
+            width: '100%',
+            maxWidth: '260px',
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: 10,
             background: 'rgba(255,255,255,0.15)',
             backdropFilter: 'blur(12px)',
@@ -327,8 +333,11 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
+            width: '100%',
+            maxWidth: '260px',
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: 10,
             background: 'rgba(255,255,255,0.15)',
             backdropFilter: 'blur(12px)',
