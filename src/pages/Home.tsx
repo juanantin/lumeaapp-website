@@ -82,7 +82,7 @@ export default function Home() {
             fontWeight: 300,
             letterSpacing: '0.25em',
             fontSize: '5rem',
-            margin: '0 0 12px 0',
+            margin: '0 0 4px 0',
             textShadow: '0 0 30px rgba(255,255,255,0.4)',
           }}>
             LUMEA
@@ -135,6 +135,49 @@ export default function Home() {
           }}>
             Scan with your mobile
           </p>
+        </div>
+
+        {/* Footer */}
+        <div style={{
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          padding: '16px',
+          textAlign: 'center',
+          fontSize: '0.75rem',
+          fontFamily: 'Sora',
+          fontWeight: 300,
+          display: 'flex',
+          gap: '16px',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+          <span style={{ color: 'rgba(255, 255, 255, 0.45)' }}>© 2026 DOZO Studio</span>
+          <a
+            href="/#/privacy"
+            style={{ color: 'rgba(255, 255, 255, 0.45)', textDecoration: 'none' }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+          >
+            Privacy
+          </a>
+          <a
+            href="/#/terms"
+            style={{ color: 'rgba(255, 255, 255, 0.45)', textDecoration: 'none' }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+          >
+            Terms
+          </a>
+          <a
+            href="/#/support"
+            style={{ color: 'rgba(255, 255, 255, 0.45)', textDecoration: 'none' }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+          >
+            Support
+          </a>
         </div>
       </div>
     )
