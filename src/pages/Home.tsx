@@ -73,6 +73,7 @@ export default function Home() {
                 position: 'relative',
                 zIndex: 1,
               }}
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
             />
           </div>
 
@@ -181,6 +182,7 @@ export default function Home() {
             position: 'relative',
             zIndex: 1,
           }}
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
         />
 
         {/* App Name */}
