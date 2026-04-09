@@ -69,7 +69,7 @@ export default function Home() {
               style={{
                 width: '160px',
                 height: '160px',
-                filter: 'brightness(1.2)',
+                filter: 'brightness(1.2) drop-shadow(0 4px 16px rgba(0,0,0,0.18))',
                 position: 'relative',
                 zIndex: 1,
               }}
@@ -105,6 +105,7 @@ export default function Home() {
             lineHeight: '1.6',
             maxWidth: '340px',
             marginBottom: '32px',
+            marginTop: '24px',
           }}>
             Breathwork sessions, binaural audio and chromotherapy light. Designed to reset your nervous system in minutes.
           </p>
@@ -118,11 +119,11 @@ export default function Home() {
           alignItems: 'center',
         }}>
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://lumeaapp.com&bgcolor=ffffff"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://lumeaapp.com&bgcolor=ffffff"
             alt="QR Code"
             style={{
-              width: '260px',
-              height: '260px',
+              width: '160px',
+              height: '160px',
               marginBottom: '16px',
               borderRadius: '12px',
             }}
@@ -186,24 +187,34 @@ export default function Home() {
   return (
     <div style={{
       width: '100%',
-      minHeight: '100vh',
+      height: '100dvh',
+      minHeight: '100dvh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',
-      padding: '20px',
+      justifyContent: 'space-between',
+      padding: '0 20px',
+      paddingTop: 'env(safe-area-inset-top, 48px)',
       overflow: 'hidden',
+      boxSizing: 'border-box',
       background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
       backgroundSize: '200% 200%',
       animation: 'gradientShift 15s ease-in-out infinite',
     }}>
       {/* Hero Section */}
       <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        flex: 1,
+        justifyContent: 'center',
+      }}>
+      <div style={{
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: '48px',
       }}>
         {/* Radial Glow */}
         <div style={{
@@ -223,9 +234,9 @@ export default function Home() {
           src="/LUMEA_logo.png"
           alt="LUMEA"
           style={{
-            width: '128px',
-            height: '128px',
-            filter: 'brightness(1.2)',
+            width: 'clamp(96px, 20vw, 128px)',
+            height: 'clamp(96px, 20vw, 128px)',
+            filter: 'brightness(1.2) drop-shadow(0 4px 16px rgba(0,0,0,0.18))',
             marginBottom: '20px',
             position: 'relative',
             zIndex: 1,
@@ -238,7 +249,7 @@ export default function Home() {
           color: 'white',
           fontWeight: 300,
           letterSpacing: '0.3em',
-          fontSize: '3rem',
+          fontSize: 'clamp(2rem, 8vw, 3rem)',
           margin: '0 0 16px 0',
           textShadow: '0 0 30px rgba(255,255,255,0.4)',
           textAlign: 'center',
@@ -251,7 +262,7 @@ export default function Home() {
           color: 'rgba(255,255,255,0.7)',
           letterSpacing: '0.15em',
           fontWeight: 300,
-          fontSize: '0.95rem',
+          fontSize: 'clamp(0.8rem, 3vw, 1rem)',
           margin: '0 0 16px 0',
           textAlign: 'center',
         }}>
@@ -261,10 +272,10 @@ export default function Home() {
         {/* App Description */}
         <p style={{
           color: 'rgba(255,255,255,0.65)',
-          fontSize: '0.95rem',
+          fontSize: 'clamp(0.75rem, 2.5vw, 0.9rem)',
           fontWeight: 300,
           lineHeight: '1.6',
-          maxWidth: '340px',
+          maxWidth: '300px',
           textAlign: 'center',
           marginTop: '16px',
           marginBottom: '0',
@@ -272,15 +283,22 @@ export default function Home() {
           Breathwork sessions, binaural audio and chromotherapy light. Designed to reset your nervous system in minutes.
         </p>
       </div>
+      </div>
 
+      {/* Download Buttons & Footer */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        paddingBottom: '32px',
+        gap: '12px',
+      }}>
       {/* Download Buttons */}
       <div style={{
         display: 'flex',
         flexDirection: 'column',
         gap: '12px',
         alignItems: 'center',
-        marginTop: '32px',
-        marginBottom: '80px',
       }}>
         <a
           href='https://apps.apple.com/app/lumea/id6743393506'
@@ -330,15 +348,10 @@ export default function Home() {
 
       {/* Footer */}
       <div style={{
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '16px',
-        paddingBottom: '24px',
+        gap: '12px',
       }}>
         <p style={{
           color: 'rgba(255,255,255,0.5)',
@@ -384,6 +397,7 @@ export default function Home() {
             Support
           </a>
         </div>
+      </div>
       </div>
     </div>
   )

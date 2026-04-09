@@ -1,8 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Support() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
+
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.textContent = `
+      @keyframes gradientShift {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    `
+    document.head.appendChild(style)
+    return () => { document.head.removeChild(style) }
+  }, [])
 
   const faqs = [
     {
@@ -33,6 +46,9 @@ export default function Support() {
       justifyContent: 'flex-start',
       padding: '20px',
       paddingTop: '40px',
+      background: 'linear-gradient(135deg, #c26afe 0%, #8b7fff 25%, #6a9fff 50%, #52a3ff 75%, #52a3ff 100%)',
+      backgroundSize: '200% 200%',
+      animation: 'gradientShift 15s ease-in-out infinite',
     }}>
       <div style={{
         background: 'rgba(255,255,255,0.10)',
