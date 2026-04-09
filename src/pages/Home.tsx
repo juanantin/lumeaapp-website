@@ -13,7 +13,7 @@ export default function Home() {
       }
     `
     document.head.appendChild(style)
-    return () => document.head.removeChild(style)
+    return () => { document.head.removeChild(style) }
   }, [])
 
   useEffect(() => {
