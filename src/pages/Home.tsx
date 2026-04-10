@@ -156,7 +156,7 @@ export default function Home() {
         }}>
           <span style={{ color: 'rgba(255, 255, 255, 0.45)' }}>© 2026 DOZO Studio</span>
           <a
-            href="/#/privacy"
+            href="/privacy"
             style={{ color: 'rgba(255, 255, 255, 0.45)', textDecoration: 'none' }}
             onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
             onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
@@ -164,7 +164,7 @@ export default function Home() {
             Privacy
           </a>
           <a
-            href="/#/terms"
+            href="/terms"
             style={{ color: 'rgba(255, 255, 255, 0.45)', textDecoration: 'none' }}
             onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
             onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
@@ -172,7 +172,7 @@ export default function Home() {
             Terms
           </a>
           <a
-            href="/#/support"
+            href="/support"
             style={{ color: 'rgba(255, 255, 255, 0.45)', textDecoration: 'none' }}
             onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
             onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
@@ -376,7 +376,7 @@ export default function Home() {
           justifyContent: 'center',
         }}>
           <a
-            href="/#/privacy"
+            href="/privacy"
             style={{
               color: 'rgba(255,255,255,0.4)',
               fontSize: '0.75rem',
@@ -386,7 +386,7 @@ export default function Home() {
             Privacy Policy
           </a>
           <a
-            href="/#/terms"
+            href="/terms"
             style={{
               color: 'rgba(255,255,255,0.4)',
               fontSize: '0.75rem',
@@ -396,7 +396,7 @@ export default function Home() {
             Terms
           </a>
           <a
-            href="/#/support"
+            href="/support"
             style={{
               color: 'rgba(255,255,255,0.4)',
               fontSize: '0.75rem',

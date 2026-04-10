@@ -27,7 +27,7 @@ export default function Footer() {
         flexWrap: 'wrap',
       }}>
         <a
-          href="/#/privacy"
+          href="/privacy"
           style={{
             color: 'rgba(255,255,255,0.6)',
             fontSize: '0.85rem',
@@ -44,7 +44,7 @@ export default function Footer() {
           Privacy Policy
         </a>
         <a
-          href="/#/terms"
+          href="/terms"
           style={{
             color: 'rgba(255,255,255,0.6)',
             fontSize: '0.85rem',
@@ -61,7 +61,7 @@ export default function Footer() {
           Terms
         </a>
         <a
-          href="/#/support"
+          href="/support"
           style={{
             color: 'rgba(255,255,255,0.6)',
             fontSize: '0.85rem',
