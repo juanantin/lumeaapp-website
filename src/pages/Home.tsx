@@ -304,7 +304,7 @@ export default function Home() {
         margin: 'auto',
       }}>
         <a
-          href='https://apps.apple.com/app/lumea/id6743393506'
+          href='https://apps.apple.com/us/app/lumea-light-for-your-mind/id6761209433'
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -329,7 +329,7 @@ export default function Home() {
           <div style={{ textAlign: 'left' }}><div style={{ fontSize: 10, opacity: 0.7 }}>Download on the</div><div style={{ fontSize: 16 }}>App Store</div></div>
         </a>
         <a
-          href='https://play.google.com/store/apps/details?id=com.lumeaapp.app'
+          href='https://play.google.com/store/apps/details?id=com.lumeaapp.app&pli=1'
           target="_blank"
           rel="noopener noreferrer"
           style={{
