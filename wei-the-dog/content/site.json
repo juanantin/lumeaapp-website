@@ -1,0 +1,14 @@
+{
+  "film": {
+    "poster": "/wei-assets/film-poster.jpg",
+    "video_url": "",
+    "runtime": "[RUNTIME]"
+  },
+  "links": {
+    "buy": "https://app.uniswap.org/",
+    "chart": "https://dexscreener.com/",
+    "x": "https://x.com/",
+    "telegram": "https://t.me/"
+  },
+  "lore_tweet": "https://x.com/cobie/status/1348993489669935108"
+}
