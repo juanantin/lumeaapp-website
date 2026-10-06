@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-type Links = { buy: string; chart: string; x: string; telegram: string };
+type Links = { buy: string; chart: string; x: string; telegram: string; index?: string };
 
 export function Buy({ address, ticker, links }: { address: string; ticker: string; links: Links }) {
   const [copied, setCopied] = useState(false);
@@ -30,7 +30,7 @@ export function Buy({ address, ticker, links }: { address: string; ticker: strin
 
   return (
     <section id="buy" className="relative isolate overflow-hidden py-28 md:py-40">
-      <Image src="/wei-assets/buy.jpg" alt="" fill sizes="100vw" className="-z-20 object-cover" />
+      <Image src="/wei-assets/hero-wide.jpg" alt="" fill sizes="100vw" className="-z-20 object-cover object-[center_40%]" />
       <div className="absolute inset-0 -z-10 bg-bg/35" />
 
       <div className="container-x flex flex-col items-center text-center">
@@ -63,15 +63,18 @@ export function Buy({ address, ticker, links }: { address: string; ticker: strin
           >
             Buy ${ticker}
           </a>
-          <a href={links.chart} target="_blank" rel="noopener noreferrer" className={ghost}>
-            Chart
-          </a>
-          <a href={links.x} target="_blank" rel="noopener noreferrer" className={ghost} aria-label="X">
-            X
-          </a>
-          <a href={links.telegram} target="_blank" rel="noopener noreferrer" className={ghost}>
-            Telegram
-          </a>
+          {[
+            { href: links.chart, label: "Chart" },
+            { href: links.index, label: "Index" },
+            { href: links.x, label: "X" },
+            { href: links.telegram, label: "Telegram" },
+          ]
+            .filter((l) => l.href)
+            .map((l) => (
+              <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={ghost}>
+                {l.label}
+              </a>
+            ))}
         </div>
       </div>
     </section>

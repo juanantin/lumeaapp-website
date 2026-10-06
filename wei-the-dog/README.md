@@ -15,8 +15,8 @@ npm run build && npm start   # production check
   - A `locked` episode shows **Signal incoming**. It unlocks automatically once the live holder count reaches `unlock_at_holders`. To unlock it by hand, set `locked: false`.
   - The hero badge ("Episode 0X incoming") points at the first locked episode.
   - `video_url` accepts YouTube, Vimeo or a direct `.mp4`/`.webm` link.
-- **Film, links, tweet**: `content/site.json`.
-- **Images**: `public/wei-assets/`: `hero.jpg`, `avatar.jpg`, `tweet-fallback.jpg`, `ep01.jpg`…, `film-poster.jpg`, `buy.jpg`. To change an image, overwrite the file with the same name.
+- **Contract, film, links, tweet**: `content/site.json`. A link left empty hides its button.
+- **Images**: `public/wei-assets/`: `hero.jpg` (hero), `wei-medallion.jpg` (nav + vitality avatar), `tweet-fallback.jpg`, `ep01.jpg`…, `film-poster.jpg`, `hero-wide.jpg` (Keep Wei Alive background). To change an image, overwrite the file with the same name.
 
 ## Live dashboard
 
@@ -24,7 +24,7 @@ npm run build && npm start   # production check
 
 | Card | Source |
 |---|---|
-| Market cap, 24h volume, price | DexScreener `tokens/v1/{DEXSCREENER_CHAIN}/{TOKEN_ADDRESS}`. Price and market cap come from the deepest pool; volume is summed across all pools |
+| Market cap, 24h volume, price | DexScreener `latest/dex/tokens/{address}` (all chains, or limited by `DEXSCREENER_CHAIN`). Price and market cap come from the deepest pool; volume is summed across all pools |
 | Holders | Blockscout (free) or Etherscan V2 `tokenholdercount` (Pro plan). Chosen with `HOLDERS_PROVIDER` |
 | Fees collected / ETH sent home / Last transfer | Etherscan V2 normal and internal txs of `FEE_WALLET`: ETH in = fees, ETH out = distributed. You can override them with `*_OVERRIDE` |
 | Wei vitality | 24h txns (buys + sells) ÷ `VITALITY_MAX_TXNS`, capped at 100% |

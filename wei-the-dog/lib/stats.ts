@@ -16,6 +16,7 @@ async function getJson<T>(url: string): Promise<T> {
 // ---------- DexScreener: price, market cap, 24h volume, 24h txns ----------
 
 type DexPair = {
+  chainId?: string;
   priceUsd?: string;
   marketCap?: number;
   fdv?: number;
@@ -26,10 +27,12 @@ type DexPair = {
 
 async function getMarket() {
   if (!config.tokenAddress) throw new Error("TOKEN_ADDRESS not set");
-  const pairs = await getJson<DexPair[]>(
-    `https://api.dexscreener.com/tokens/v1/${config.dexChain}/${config.tokenAddress}`,
+  // Chain-agnostic lookup: returns every pool for this address across all chains.
+  const data = await getJson<{ pairs: DexPair[] | null }>(
+    `https://api.dexscreener.com/latest/dex/tokens/${config.tokenAddress}`,
   );
-  if (!Array.isArray(pairs) || pairs.length === 0) throw new Error("no pairs");
+  const pairs = (data.pairs ?? []).filter((p) => !config.dexChain || p.chainId === config.dexChain);
+  if (pairs.length === 0) throw new Error("no pairs");
 
   // Price & market cap from the deepest pool; volume and txns summed across all pools.
   const main = [...pairs].sort((a, b) => (b.liquidity?.usd ?? 0) - (a.liquidity?.usd ?? 0))[0];

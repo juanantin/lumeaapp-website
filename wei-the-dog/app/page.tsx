@@ -24,7 +24,7 @@ export default function Home() {
       <main>
         <Hero incoming={nextLocked?.number ?? null} />
         <Lore tweetUrl={site.lore_tweet} />
-        <Dashboard />
+        <Dashboard indexUrl={site.links.index} />
         <Episodes episodes={episodes} />
         <FullFilm poster={site.film.poster} videoUrl={site.film.video_url} runtime={site.film.runtime} />
         <Buy address={config.tokenAddress} ticker={ticker} links={site.links} />

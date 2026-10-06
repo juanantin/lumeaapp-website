@@ -18,11 +18,11 @@ export function Nav({ ticker, buyUrl }: { ticker: string; buyUrl: string }) {
       <div className="container-x flex h-[72px] items-center justify-between">
         <a href="#top" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image
-            src="/wei-assets/avatar.jpg"
+            src="/wei-assets/wei-medallion.jpg"
             alt=""
             width={40}
             height={40}
-            className="size-10 rounded-full ring-2 ring-accent/70"
+            className="size-10 rounded-full"
           />
           <span className="title text-[1.6rem] font-bold">Wei the Dog</span>
         </a>

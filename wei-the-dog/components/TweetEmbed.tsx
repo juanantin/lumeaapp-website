@@ -66,8 +66,8 @@ export function TweetEmbed({ url, fallback }: { url: string; fallback: string })
           <Image
             src={fallback}
             alt="Cobie on X: Me on Mars using Ethereum to pay my family back home on Earth while my immortal dog Wei protects me from the now-hostile Mars Rover Curiosity"
-            width={993}
-            height={1037}
+            width={951}
+            height={1000}
             className={`h-auto w-full rounded-2xl shadow-2xl shadow-black/50 ${status === "loading" ? "opacity-90" : ""}`}
           />
         </a>

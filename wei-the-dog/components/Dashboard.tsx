@@ -28,7 +28,7 @@ function Card({
   );
 }
 
-export function Dashboard() {
+export function Dashboard({ indexUrl }: { indexUrl?: string }) {
   const { stats } = useStats();
   const s = stats;
   const vitality = s?.vitality ?? null;
@@ -58,7 +58,7 @@ export function Dashboard() {
           <Card
             label="Fees collected"
             value={s?.feesCollectedEth != null ? <>{eth(s.feesCollectedEth)} ETH</> : DASH}
-            source="Fee wallet"
+            source={indexUrl ? <a href={indexUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-ink/30 underline-offset-2 hover:text-accent">Stockify index</a> : "Fee wallet"}
           />
           <Card
             label="ETH sent home"
@@ -76,11 +76,11 @@ export function Dashboard() {
 
         <div className="mt-3 flex flex-col gap-5 rounded-[4px] border border-line bg-card p-5 sm:flex-row sm:items-center md:mt-4 md:gap-7 md:p-6">
           <Image
-            src="/wei-assets/avatar.jpg"
+            src="/wei-assets/wei-medallion.jpg"
             alt="Wei"
             width={88}
             height={88}
-            className="size-16 shrink-0 rounded-full md:size-[88px]"
+            className="size-16 shrink-0 rounded-full ring-2 ring-glow ring-offset-2 ring-offset-card md:size-[88px]"
             style={{ boxShadow: `0 0 ${vitality === null ? 0 : 6 + vitality / 4}px rgba(111,168,255,0.55)` }}
           />
           <div className="min-w-0 flex-1">

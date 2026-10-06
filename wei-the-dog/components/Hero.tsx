@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Hero({ incoming }: { incoming: number | null }) {
   return (
     <section id="top" className="relative isolate flex min-h-[640px] items-center overflow-hidden md:min-h-[760px]">
-      <Image src="/wei-assets/hero.jpg" alt="" fill priority sizes="100vw" className="-z-20 object-cover object-[70%_center]" />
+      <Image src="/wei-assets/hero.jpg" alt="" fill priority sizes="100vw" className="-z-20 object-cover object-[60%_center] md:object-center" />
       {/* readability gradients */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-bg/80 via-bg/30 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-bg to-transparent" />
